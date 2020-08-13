@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:test_form/Resources/Private/Language/locallang" date="2020-08-13T10:37:28Z" product-name="test_form">
+		<header/>
+		<body>
+			<trans-unit id="tx_testform_domain_model_test" resname="tx_testform_domain_model_test">
+				<source>Test</source>
+			</trans-unit>
+			<trans-unit id="tx_testform_domain_model_test.name" resname="tx_testform_domain_model_test.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_testform_domain_model_test.test" resname="tx_testform_domain_model_test.test">
+				<source>Test</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

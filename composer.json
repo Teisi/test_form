@@ -1,0 +1,28 @@
+{
+    "name": "myvendor/text-example",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "authors": [
+        {
+            "name": "latest",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^10.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "MyVendor\\TestForm\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MyVendor\\TestForm\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "myvendor/text-example": "self.version",
+        "typo3-ter/text-example": "self.version"
+    }
+}

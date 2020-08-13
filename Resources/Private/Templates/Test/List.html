@@ -1,0 +1,62 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:testext="http://typo3.org/ns/MyVendor/TestForm/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="content">
+    <h1>Listing for Test</h1>
+
+    <f:flashMessages />
+
+    <f:comment>------------</f:comment>
+    <f:comment>   WORKS    </f:comment>
+    <f:comment>------------</f:comment>
+    <f:form action="filter" method="POST" addQueryString="1">
+        <h3>works - fluid form (post)</h3>
+        <f:form.submit value="Send post" />
+    </f:form>
+    <br /><br />
+
+    <form action="<f:uri.action action='filter' addQueryString='1' />" method="GET">
+        <h3>works - html-form (get)</h3>
+        <h4>with hidden field "action" (workaround)</h4>
+        <f:form.hidden name="tx_testform_list[action]" value="filter" />
+        <button type="submit">Send html-form</button>
+    </form>
+    <br /><br />
+
+    <testext:form action="filter" method="GET" addQueryString="1">
+        <h3>works - custom fluid form (get)</h3>
+        <h4>with hidden field "action" (workaround)</h4>
+        <f:form.hidden name="action" value="filter" />
+        <f:form.submit value="Send custom fluid form" />
+    </testext:form>
+    <br /><br />
+    <br /><br />
+
+    <f:comment>------------</f:comment>
+    <f:comment>DOESN'T WORK</f:comment>
+    <f:comment>------------</f:comment>
+    <f:form action="filter" method="GET" addQueryString="1">
+        <h3>don't work - fluid form (get)</h3>
+        <f:form.submit value="Send get" />
+    </f:form>
+    <br /><br />
+
+    <f:comment>inline uri action not work at all: {f:uri.action(action: 'filter', addQueryString: '1'}</f:comment>
+    <form action="<f:uri.action action='filter' addQueryString='1' />" method="GET">
+        <h3>don't work - html-form (get)</h3>
+        <button type="submit">Send html-form</button>
+    </form>
+    <br /><br />
+
+    <f:comment>uses custom cause of https://www.ophidia.net/fluid-fform-referrer-deaktivieren/</f:comment>
+    <testext:form action="filter" method="GET" addQueryString="1">
+        <h3>don't work - custom fluid form (get)</h3>
+        <f:form.submit value="Send custom fluid form" />
+    </testext:form>
+
+</f:section>
+
+</html>

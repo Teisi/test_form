@@ -1,0 +1,30 @@
+
+plugin.tx_testform_list {
+    view {
+        # cat=plugin.tx_testform_list/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:test_form/Resources/Private/Templates/
+        # cat=plugin.tx_testform_list/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:test_form/Resources/Private/Partials/
+        # cat=plugin.tx_testform_list/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:test_form/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_testform_list//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}
+
+plugin.tx_testform_latest {
+    view {
+        # cat=plugin.tx_testform_latest/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:test_form/Resources/Private/Templates/
+        # cat=plugin.tx_testform_latest/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:test_form/Resources/Private/Partials/
+        # cat=plugin.tx_testform_latest/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:test_form/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_testform_latest//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}
